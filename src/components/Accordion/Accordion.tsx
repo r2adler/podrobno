@@ -11,11 +11,12 @@ export const Accordion: FC<AccordionProps> = (props) => {
         <>
             <AccordionTitle title={props.titleValue}/>
             {
-                props.collapsed && <AccordionBody/>
+                !props.collapsed && <AccordionBody/>
             }
         </>
     )
 }
+
 
 interface AccordionTitleProps {
     title: string
